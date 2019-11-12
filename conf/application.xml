@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application port="9000">     
+    
+    <!--  详细配置说明见： http://redkale.org/redkale.html#redkale_confxml  -->
+    
+    <resources>     
+        <properties load="config.properties">
+        </properties>         
+    </resources> 
+        
+    <server protocol="HTTP" host="0.0.0.0" port="8080">  
+    
+        <request>
+            <remoteaddr value="request.headers.X-RemoteAddress"/>
+        </request>
+        
+        <response>
+            <defcookie domain="" path=""/>
+            <addheader name="Access-Control-Allow-Origin" value="request.headers.Origin" /> 
+            <setheader name="Access-Control-Allow-Headers" value="request.headers.Access-Control-Request-Headers"/>			
+            <setheader name="Access-Control-Expose-Headers" value="app-agent,jsessionid,unf,retcode,retinfo"/>
+            <setheader name="Access-Control-Allow-Credentials" value="true"/>
+            <options auto="true" />
+        </response>
+        <services autoload="true" />  
+        <filters autoload="true" />  
+        
+        <servlets path="/wxpipes" autoload="true" >
+                <service value="com.xxx.XXXXService"/>
+        </servlets>  
+    </server>
+    
+    <server protocol="SNCP" host="0.0.0.0" port="20730">  
+        <services autoload="true" />  
+    </server>
+    
+    <server protocol="WATCH" host="0.0.0.0" port="20930">      
+        <services autoload="true" />              
+        <filters autoload="true" /> 
+    </server>
+    
+</application>
