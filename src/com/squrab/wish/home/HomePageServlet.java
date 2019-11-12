@@ -17,7 +17,7 @@ import org.redkale.util.Comment;
  *
  * @author 86176
  */
-@WebServlet(name = "/homepage/*", repair = false, moduleid = -1, comment = "首頁接口")
+@WebServlet( value = {"/homepage/*"},  moduleid = -1, comment = "首頁接口")
 public class HomePageServlet extends BaseServlet {
 
     @Resource

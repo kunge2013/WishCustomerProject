@@ -21,7 +21,7 @@ import org.redkale.source.Flipper;
  *
  * @author SquRab
  */
-@WebServlet(name = "/wishlist/*", repair = false, moduleid = -1, comment = "心愿清单接口")
+@WebServlet(value = {"/wishlist/*"},  moduleid = -1, comment = "心愿清单接口")
 public class WishlistServlet extends BaseServlet {
 
     @Resource

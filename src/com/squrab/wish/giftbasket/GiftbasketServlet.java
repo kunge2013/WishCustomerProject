@@ -21,7 +21,7 @@ import org.redkale.source.Flipper;
  *
  * @author SquRab
  */
-@WebServlet(name = "/giftbasket/*", repair = false, moduleid = -1, comment = "礼品篮")
+@WebServlet(value = {"/giftbasket/*"}, moduleid = -1, comment = "礼品篮")
 public class GiftbasketServlet extends BaseServlet {
 
     @Resource

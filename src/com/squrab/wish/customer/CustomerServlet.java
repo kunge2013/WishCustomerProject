@@ -33,7 +33,7 @@ import org.redkale.util.Comment;
  *
  * @author 86176
  */
-@WebServlet(name = "/customer/*", repair = false, moduleid = -1, comment = "用户")
+@WebServlet(value = {"/customer/*"},  moduleid = -1, comment = "用户")
 public class CustomerServlet extends BaseServlet {
 
     @Resource

@@ -34,7 +34,7 @@ import com.squrab.wish.goods.BannerService;
 
 import com.squrab.wish.order.RecAddressService;
 
-@WebServlet(value = {"/goods/*"}, repair = false, comment = "商品访问服务")
+@WebServlet(value = {"/goods/*"}, comment = "商品访问服务")
 public class GoodsWXServlet extends BaseServlet {
 
     /**

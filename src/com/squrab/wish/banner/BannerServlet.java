@@ -5,6 +5,7 @@
  */
 package com.squrab.wish.banner;
 
+import com.squrab.wish.base.BaseServlet;
 import com.squrab.wish.goods.BannerBean;
 import com.squrab.wish.goods.BannerService;
 import javax.annotation.Resource;
@@ -18,8 +19,8 @@ import org.redkale.source.Flipper;
  *
  * @author SquRab
  */
-@WebServlet(name = "/banner/*", repair = false, moduleid = -1, comment = "轮播图")
-public class BannerServlet {
+@WebServlet(value = {"/banner/*"}, moduleid = -1, comment = "轮播图")
+public class BannerServlet extends BaseServlet {
 
     @Resource
     private BannerService bannerService;
